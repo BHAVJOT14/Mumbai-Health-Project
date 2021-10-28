@@ -49,7 +49,7 @@ var json = `{
           {
             "name": "Dr. Vivek Waghela",
             "Qualification": "MBBS | MD(Medicine)",
-            "Picture": "https://i.ibb.co/6WJphLj/Dr-Vivek-Waghela.jpg"",
+            "Picture": "https://i.ibb.co/6WJphLj/Dr-Vivek-Waghela.jpg",
             "Linkedin": "https://www.linkedin.com/in/vivek-waghela-a45ab388/"
           },
           {
