@@ -77,22 +77,17 @@ if (isset($_POST['mail']) && $_POST['mail'] != '') {
     </header>
     <!--Header Ends Here  -->
 
-    <div class="container" style="display: flex; flex-wrap: wrap">
+    <?php
+    if ($message_sent) {
 
 
-        <?php
-        if ($message_sent) {
+    ?>
+
+        <h1 style="text-align: center;">Thanks, <?php echo "$userName"; ?>, We will get in touch very soon with you !!</h1>
+
+        <div class="container" style="display: flex; flex-wrap: wrap">
 
 
-        ?>
-
-            <h2 style="text-align: center;">Thanks, We will get in touch very soon</h2>
-
-            <!-- I have not done the modal now after two days that will be also completed -->
-
-        <?php
-        } else {
-        ?>
 
             <div class="leftside">
                 <form class="contact-form" action="contact_us.php" method="post">
@@ -108,56 +103,76 @@ if (isset($_POST['mail']) && $_POST['mail'] != '') {
             </div>
 
         <?php
-        };
+    } else {
         ?>
+            <div class="container" style="display: flex; flex-wrap: wrap">
 
 
-        <div class="rightside">
-            <img src="images/letter.jpg" alt="mumbai_map" class="mum_map" />
-        </div>
-    </div>
 
-    <!-- Footer  starts here -->
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="row">
-                <div class="footer-col">
-                    <h2 class="logo-text">Mumbai Health Project</h2>
-                    <p>242 Geeta Nagar Navy Nagar</p>
-                    <p>Colaba Mumbai 400005</p>
+                <div class="leftside">
+                    <form class="contact-form" action="contact_us.php" method="post">
+                        <h1 class="c_us">Contact Us</h1>
+                        <input type="text" id="txt_input" name="name" placeholder="Full name" />
+                        <br />
+                        <input type="text" id="txt_input" name="mail" placeholder="your e-mail" /><br />
+                        <input type="text" id="txt_input" name="subject" placeholder="subject" /><br />
+                        <textarea name="message" placeholder="Message" id="message_area"></textarea><br />
+
+                        <button type="submit" class="btn" name="submit">Send E-mail</button>
+                    </form>
                 </div>
-                <div class="footer-col" id="logo_foot">
-                    <div class="socials">
-                        <h4>Follow Us</h4>
-                        <a href="https://www.facebook.com/hargullyhealthy"><i class="fab fa-facebook"></i></a>
-                        <a href="https://instagram.com/mumbaihealthproject?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/hargullyhealthy?s=11"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/mumbai-health-project/"><i class="fab fa-linkedin"></i></a>
+
+            <?php
+        };
+            ?>
+
+
+            <div class="rightside">
+                <img src="images/letter.jpg" alt="mumbai_map" class="mum_map" />
+            </div>
+            </div>
+
+            <!-- Footer  starts here -->
+            <footer class="footer">
+                <div class="container-footer">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h2 class="logo-text">Mumbai Health Project</h2>
+                            <p>242 Geeta Nagar Navy Nagar</p>
+                            <p>Colaba Mumbai 400005</p>
+                        </div>
+                        <div class="footer-col" id="logo_foot">
+                            <div class="socials">
+                                <h4>Follow Us</h4>
+                                <a href="https://www.facebook.com/hargullyhealthy"><i class="fab fa-facebook"></i></a>
+                                <a href="https://instagram.com/mumbaihealthproject?utm_medium=copy_link"><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/hargullyhealthy?s=11"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/company/mumbai-health-project/"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-col">
+                            <div class="contact">
+                                <h4>Contact us</h4>
+                                <a href="tel:+91-9769949470"><i class="ico fa fa-phone"></i> &nbsp; +91-9769949470</a>
+                                <a href="mailto:support@mumbaihealthproject.com"><i class="ico fa fa-envelope"></i>&nbsp;
+                                    support@mumbaihealthproject.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row author_name">
+                        <div>
+                            <span style="font-size: 10px">&#169; Developed by
+                                <a href="https://www.linkedin.com/in/bhavjot-singh/" target="_blank">
+                                    Bhavjot Singh</a>
+                                &
+                                <a href="https://github.com/rishiarya09">Rishi Arya Juturu</a></span>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <div class="contact">
-                        <h4>Contact us</h4>
-                        <a href="tel:+91-9769949470"><i class="ico fa fa-phone"></i> &nbsp; +91-9769949470</a>
-                        <a href="mailto:support@mumbaihealthproject.com"><i class="ico fa fa-envelope"></i>&nbsp;
-                            support@mumbaihealthproject.com</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row author_name">
-                <div>
-                    <span style="font-size: 10px">&#169; Developed by
-                        <a href="https://www.linkedin.com/in/bhavjot-singh/" target="_blank">
-                            Bhavjot Singh</a>
-                        &
-                        <a href="https://github.com/rishiarya09">Rishi Arya Juturu</a></span>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer ends here -->
+            </footer>
+            <!-- Footer ends here -->
 
-    <script type="text/javascript" src="./main.js"></script>
+            <script type="text/javascript" src="./main.js"></script>
 </body>
 
 </html>
