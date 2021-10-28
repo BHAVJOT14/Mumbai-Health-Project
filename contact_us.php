@@ -92,10 +92,10 @@ if (isset($_POST['mail']) && $_POST['mail'] != '') {
             <div class="leftside">
                 <form class="contact-form" action="contact_us.php" method="post">
                     <h1 class="c_us">Contact Us</h1>
-                    <input type="text" id="txt_input" name="name" placeholder="Full name" />
+                    <input type="text" id="txt_input" name="name" placeholder="Full name" required />
                     <br />
-                    <input type="text" id="txt_input" name="mail" placeholder="your e-mail" /><br />
-                    <input type="text" id="txt_input" name="subject" placeholder="subject" /><br />
+                    <input type="text" id="txt_input" name="mail" placeholder="your e-mail" required /><br />
+                    <input type="text" id="txt_input" name="subject" placeholder="subject" required /><br />
                     <textarea name="message" placeholder="Message" id="message_area"></textarea><br />
 
                     <button type="submit" class="btn" name="submit">Send E-mail</button>
